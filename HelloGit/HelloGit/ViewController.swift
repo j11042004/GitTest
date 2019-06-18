@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .blue
         let tapShowLogAlert = UITapGestureRecognizer(target: self, action: #selector(tapLogin))
         self.view.addGestureRecognizer(tapShowLogAlert)
 
