@@ -14,10 +14,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var logInBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapShowLogAlert = UITapGestureRecognizer(target: self, action: #selector(tapLogin))
+        self.view.addGestureRecognizer(tapShowLogAlert)
     }
     
     
     @IBAction func logIn(_ sender: UIButton) {
+    }
+    @objc func tapLogin(){
+        switch self.view.backgroundColor {
+        case UIColor.red:
+            self.view.backgroundColor = UIColor.brown
+            break
+        default:
+            self.view.backgroundColor = UIColor.red
+            break
+        }
+        let alert = UIAlertController(title: "警告", message: "登入吧！騷年", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "上吧", style: .cancel, handler: nil)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
