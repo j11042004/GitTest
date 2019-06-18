@@ -9,19 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var accountTextField: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var logInBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .brown
-        let button = UIButton(type: .custom)
-        button.backgroundColor = .green
-        button.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
-        button.setTitle("Test", for: .normal)
-        button.setTitleColor(.red, for: .normal)
-        button.center = self.view.center
-        self.view.addSubview(button)
     }
-
-
+    
+    
+    @IBAction func logIn(_ sender: UIButton) {
+    }
 }
 
