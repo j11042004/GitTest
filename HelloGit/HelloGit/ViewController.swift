@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func logIn(_ sender: UIButton) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let resultVC : ResultViewController = mainStoryboard.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        self.present(resultVC, animated: true, completion: nil)
     }
 }
 
